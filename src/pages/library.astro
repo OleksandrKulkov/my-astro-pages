@@ -1,5 +1,9 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import '../styles/reset.css';
+import '../styles/global.css';
 
+const pageTitle = "Чайна Хатинка | Читальня";
 ---
 
 <html lang="uk">
@@ -8,16 +12,13 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Чайна хатинка | Читальня</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<header>
-            <nav>
-                <a href="/">Хатинка</a>
-                <a href="/teas/">Наші чаї</a>
-                <a href="/library/">Читальня</a>
-            </nav>
+            <Navigation />
         </header>
-		<h1>Тут розміщені статті про нашу Традицію, Ча Дао, чайну культуру й майстерність — про все, що пов'язано з Чаєм.</h1>
+		<h1>{pageTitle}</h1>
+		<h3>Тут розміщені статті про нашу Традицію, Ча Дао, чайну культуру й майстерність — про все, що пов'язано з Чаєм.</h3>
 	</body>
 </html>

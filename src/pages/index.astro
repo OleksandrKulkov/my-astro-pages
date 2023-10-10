@@ -1,5 +1,10 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import '../styles/reset.css';
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 
+const pageTitle = "Чайна Хатинка";
 ---
 
 <html lang="uk">
@@ -8,16 +13,13 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Чайна хатинка</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<header>
-            <nav>
-                <a href="/">Хатинка</a>
-                <a href="/teas/">Наші чаї</a>
-				<a href="/library/">Читальня</a>
-            </nav>
+            <Navigation />
         </header>
-		<h1>These are my tea pages.</h1>
+		<h1>{pageTitle}</h1>
+		<Footer />
 	</body>
 </html>

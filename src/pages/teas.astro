@@ -1,5 +1,9 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import '../styles/reset.css';
+import '../styles/global.css';
 
+const pageTitle = "Чайна Хатинка | Наші чаї";
 ---
 
 <html lang="uk">
@@ -8,21 +12,19 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Чайна хатинка | Наші чаї</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
         <header>
-            <nav>
-                <a href="/">Хатинка</a>
-                <a href="/teas/">Наші чаї</a>
-                <a href="/library/">Читальня</a>
-            </nav>
+            <Navigation />
         </header>
-		<h1>Тут розміщені ті чаї, які ми можемо вам запропонувати.</h1>
-        <h2>І трохи начиння...</h2>
+		<h1>{pageTitle}</h1>
+        <h2>Тут розміщені ті чаї, які ми можемо вам запропонувати.</h2>
+        <h3>І трохи начиння...</h3>
         <ul>
             <li><a href="/teas/2005-liubao/">Любао 2005 року з Вуджов</a></li>
             <li><a href="/teas/2018-ailao-dianhong-cake/">Млинець Дяньхона з Айлао 2018-го</a></li>
+            <li><a href="/teas/2021-ailao-sheng/">Шен пуер з Айлао 2021 року</a></li>
           </ul>
 	</body>
 </html>
