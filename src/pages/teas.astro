@@ -1,7 +1,9 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/reset.css';
 import '../styles/global.css';
+import Container from '../components/Container.astro';
 
 const pageTitle = "Чайна Хатинка | Наші чаї";
 ---
@@ -18,13 +20,16 @@ const pageTitle = "Чайна Хатинка | Наші чаї";
         <header>
             <Navigation />
         </header>
-		<h1>{pageTitle}</h1>
-        <h2>Тут розміщені ті чаї, які ми можемо вам запропонувати.</h2>
-        <h3>І трохи начиння...</h3>
-        <ul>
-            <li><a href="/teas/2005-liubao/">Любао 2005 року з Вуджов</a></li>
-            <li><a href="/teas/2018-ailao-dianhong-cake/">Млинець Дяньхона з Айлао 2018-го</a></li>
-            <li><a href="/teas/2021-ailao-sheng/">Шен пуер з Айлао 2021 року</a></li>
-          </ul>
+        <Container>
+            <h1>{pageTitle}</h1>
+            <h2>Тут розміщені ті чаї, які ми можемо вам запропонувати.</h2>
+            <h3>І трохи начиння...</h3>
+            <ul>
+                <li><a href="/teas/2005-liubao/">Любао 2005 року з Вуджов</a></li>
+                <li><a href="/teas/2018-ailao-dianhong-cake/">Млинець Дяньхона з Айлао 2018-го</a></li>
+                <li><a href="/teas/2021-ailao-sheng/">Шен пуер з Айлао 2021 року</a></li>
+              </ul>
+        </Container>
+        <Footer />
 	</body>
 </html>

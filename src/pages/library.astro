@@ -1,7 +1,9 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/reset.css';
 import '../styles/global.css';
+import Container from '../components/Container.astro';
 
 const pageTitle = "Чайна Хатинка | Читальня";
 ---
@@ -18,7 +20,10 @@ const pageTitle = "Чайна Хатинка | Читальня";
 		<header>
             <Navigation />
         </header>
-		<h1>{pageTitle}</h1>
-		<h3>Тут розміщені статті про нашу Традицію, Ча Дао, чайну культуру й майстерність — про все, що пов'язано з Чаєм.</h3>
+		<Container>
+			<h1>{pageTitle}</h1>
+			<h3>Тут розміщені статті про нашу Традицію, Ча Дао, чайну культуру й майстерність — про все, що пов'язано з Чаєм.</h3>
+		</Container>
+		<Footer />
 	</body>
 </html>

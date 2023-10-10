@@ -1,0 +1,23 @@
+---
+import Container from './Container.astro';
+import Navigation from './Navigation.astro';
+---
+
+<header class="header">
+  <Container>
+    <Navigation />
+  </Container>
+  <div class="theme-toggle__container">
+    <!-- I was running into some issues with the Lit integration so I'm using it as a client script for now -->
+    <theme-toggle-button></theme-toggle-button>
+  </div>
+</header>
+
+<style>
+    .header {
+        height: var(--theme-header-height, 64px);
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--theme-primary-light);
+  }
+</style>

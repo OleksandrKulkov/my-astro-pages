@@ -1,5 +1,80 @@
-<nav class="navigation">
-    <a href="/">Хатинка</a>
-    <a href="/teas/">Наші чаї</a>
-    <a href="/library/">Читальня</a>
-</nav>
+---
+import Container from './Container.astro';
+import Logo from './Logo.astro';
+---
+
+<Container>
+    <nav class="navigation">
+        <div class="nav__links">
+            <a class="header__logo" href="/" title="На Головну сторінку">
+                <Logo />
+            </a>
+            <div class="nav__links-menu">
+                <a href="/" title="На Головну сторінку">Чайна Хатинка</a>
+                <a href="/teas/" title="До Чайної Крамнички">Наші чаї</a>
+                <a href="/library/" title="До Читальні">Читальня</a>
+            </div>
+        </div>
+    </nav>
+</Container>
+
+<style>
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .nav__links,
+    .nav__links-menu {
+        width: 100%;
+        top: 5rem;
+        left: 48px;
+        margin: 0;
+        
+    }
+
+    .nav__links-menu {
+        display: none;
+    }
+
+    .nav__links a {
+        display: block;
+        text-align: center;
+        padding: 0.5em;
+        text-decoration: none;
+        font-size: var(--step-0);
+        text-transform: uppercase;
+    }
+
+    .nav__links a:hover,
+    .nav__links a:focus {
+        color: #a38017;
+        }
+
+    .expanded {
+        display: unset;
+    }
+
+    @media screen and (min-width: 636px) {
+        .nav__links,
+        .nav__links-menu {
+            display: flex;
+            align-items: center;
+            width: auto;
+            background: none;
+        }
+
+        .nav__links a {
+            display: inline-block;
+            padding: 15px 20px;
+        }
+    }
+</style>

@@ -1,8 +1,9 @@
 ---
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/reset.css';
 import '../styles/global.css';
-import Footer from '../components/Footer.astro';
+import Container from '../components/Container.astro';
 
 const pageTitle = "Чайна Хатинка";
 ---
@@ -19,7 +20,12 @@ const pageTitle = "Чайна Хатинка";
 		<header>
             <Navigation />
         </header>
-		<h1>{pageTitle}</h1>
+		<Container>
+			<h1>{pageTitle}</h1>
+		</Container>
 		<Footer />
+	<script>
+		import "../js/menu.js";
+	</script>
 	</body>
 </html>
