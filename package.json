@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.2.3"
+    "astro": "^3.2.3",
+    "astro-icon": "^0.8.1",
+    "postcss": "^8.4.31",
+    "postcss-preset-env": "^9.2.0"
   }
 }

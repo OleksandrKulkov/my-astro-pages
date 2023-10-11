@@ -1,12 +1,14 @@
 ---
 import Container from './Container.astro';
 import Navigation from './Navigation.astro';
+
+// const containerMaxWidth = "800px";
 ---
 
 <header class="header">
-  <Container>
-    <Navigation />
-  </Container>
+    <Container containerMaxWidth="800px">
+        <Navigation />
+    </Container>
   <div class="theme-toggle__container">
     <!-- I was running into some issues with the Lit integration so I'm using it as a client script for now -->
     <theme-toggle-button></theme-toggle-button>

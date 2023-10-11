@@ -23,7 +23,7 @@ import SocialList from './SocialList.astro';
       </ul>
     </div>
     <div class="footer-bottom__container">
-      <p>&copy; {new Date().getFullYear()} Чайна Хатинка</p>
+      <p>&copy; 2014-{new Date().getFullYear()} TEAHUT.COM.UA</p>
       <SocialList />
     </div>
   </Container>
@@ -62,6 +62,17 @@ import SocialList from './SocialList.astro';
     align-items: center;
     font-size: var(--step--2);
   }
+
+  [astro-icon] {
+        color: blue;
+        /* OR */
+        fill: blue;
+    }
+    [astro-icon="annotation"] {
+        color: red;
+        /* OR */
+        fill: red;
+    }
 
   @media(max-width: 768px) {
     .footer-links__grid {
