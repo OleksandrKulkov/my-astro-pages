@@ -1,35 +1,17 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/reset.css';
-import '../styles/global.css';
-import Container from '../components/Container.astro';
+import Main from '../layouts/Main.astro';
 
 const pageTitle = "Чайна Хатинка | Наші чаї";
+const containerMaxWidth = "900px";
 ---
 
-<html lang="uk">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-        <header>
-            <Navigation />
-        </header>
-        <Container>
-            <h1>{pageTitle}</h1>
-            <h2>Тут розміщені ті чаї, які ми можемо вам запропонувати.</h2>
-            <h3>І трохи начиння...</h3>
-            <ul>
-                <li><a href="/teas/2005-liubao/">Любао 2005 року з Вуджов</a></li>
-                <li><a href="/teas/2018-ailao-dianhong-cake/">Млинець Дяньхона з Айлао 2018-го</a></li>
-                <li><a href="/teas/2021-ailao-sheng/">Шен пуер з Айлао 2021 року</a></li>
-              </ul>
-        </Container>
-        <Footer />
-	</body>
-</html>
+<Main {pageTitle} {containerMaxWidth}>
+    <h1>{pageTitle}</h1>
+    <h2>Тут розміщені ті чаї, які ми можемо вам запропонувати.</h2>
+    <h3>І трохи начиння...</h3>
+    <ul>
+        <li><a href="/teas/2005-liubao/">Любао 2005 року з Вуджов</a></li>
+        <li><a href="/teas/2018-ailao-dianhong-cake/">Млинець Дяньхона з Айлао 2018-го</a></li>
+        <li><a href="/teas/2021-ailao-sheng/">Шен пуер з Айлао 2021 року</a></li>
+    </ul>
+</Main>

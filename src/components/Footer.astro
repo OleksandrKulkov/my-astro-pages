@@ -1,10 +1,11 @@
 ---
 import Container from "./Container.astro";
 import SocialList from './SocialList.astro';
+const containerMaxWidth = "900px"
 ---
 
 <footer>
-  <Container>
+  <Container {containerMaxWidth}>
     <div class="footer-links__grid">
       <ul>
         <li><strong>Чайна Хатинка</strong></li>
@@ -12,12 +13,12 @@ import SocialList from './SocialList.astro';
         <li>Про нас</li>
       </ul>
       <ul>
-        <li><strong>Чайна Крамничка</strong></li>
+        <li><strong>Крамничка</strong></li>
         <li>Про нашу крамничку</li>
         <li>Як замовити?</li>
       </ul>
       <ul>
-        <li><strong>Support</strong></li>
+        <li><strong>Читальня</strong></li>
         <li>Discord</li>
         <li>Contact Us</li>
       </ul>

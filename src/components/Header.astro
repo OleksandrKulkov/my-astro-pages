@@ -6,9 +6,7 @@ import Navigation from './Navigation.astro';
 ---
 
 <header class="header">
-    <Container containerMaxWidth="800px">
         <Navigation />
-    </Container>
   <div class="theme-toggle__container">
     <!-- I was running into some issues with the Lit integration so I'm using it as a client script for now -->
     <theme-toggle-button></theme-toggle-button>
@@ -21,5 +19,5 @@ import Navigation from './Navigation.astro';
         display: flex;
         align-items: center;
         border-bottom: 1px solid var(--theme-primary-light);
-  }
+    }
 </style>

@@ -1,19 +1,31 @@
 ---
 import Container from './Container.astro';
 import Logo from './Logo.astro';
+import navData from '../data/navData';
+import Link from './Link.astro';
+
+const containerMaxWidth = "960px";
 ---
 
-<Container>
-    <nav class="navigation">
+<Container {containerMaxWidth}>
+    <nav class="navigation" aria-label="Primary">
         <div class="nav__links">
-            <a class="header__logo" href="/" title="На Головну сторінку">
+            <a class="header__logo" href="/" aria-label="На Головну сторінку">
                 <Logo />
             </a>
-            <div class="nav__links-menu">
-                <a href="/" title="На Головну сторінку">Чайна Хатинка</a>
-                <a href="/teas/" title="До Чайної Крамнички">Наші чаї</a>
-                <a href="/library/" title="До Читальні">Читальня</a>
-            </div>
+            <ul class="nav__links-menu">
+                {
+                    navData.map((item) => (
+                        <Link
+                            text={item.name} 
+                            href={item.path} 
+                            style="secondary" 
+                            isFilled={false} 
+                            data-navLink
+                        />
+                    ))
+                }
+            </ul>
         </div>
     </nav>
 </Container>
@@ -69,12 +81,15 @@ import Logo from './Logo.astro';
             display: flex;
             align-items: center;
             width: auto;
-            background: none;
         }
 
         .nav__links a {
             display: inline-block;
-            padding: 15px 20px;
+            /* padding: 15px 20px; */
         }
     }
 </style>
+
+<script>
+    import '../js/nav.js'
+</script>

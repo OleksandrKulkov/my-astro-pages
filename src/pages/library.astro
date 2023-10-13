@@ -1,29 +1,11 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/reset.css';
-import '../styles/global.css';
-import Container from '../components/Container.astro';
+import Main from '../layouts/Main.astro';
 
 const pageTitle = "Чайна Хатинка | Читальня";
+const containerMaxWidth = "900px";
 ---
 
-<html lang="uk">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<header>
-            <Navigation />
-        </header>
-		<Container>
-			<h1>{pageTitle}</h1>
-			<h3>Тут розміщені статті про нашу Традицію, Ча Дао, чайну культуру й майстерність — про все, що пов'язано з Чаєм.</h3>
-		</Container>
-		<Footer />
-	</body>
-</html>
+<Main  {pageTitle} {containerMaxWidth} >
+	<h1>{pageTitle}</h1>
+	<h3>Тут розміщені статті про нашу Традицію, Ча Дао, чайну культуру й майстерність — про все, що пов'язано з Чаєм.</h3>
+</Main>

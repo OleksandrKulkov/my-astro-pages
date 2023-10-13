@@ -1,0 +1,26 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from '../components/Navigation.astro';
+import Container from '../components/Container.astro';
+import '../styles/reset.css';
+import '../styles/global.css';
+
+const { pageTitle, containerMaxWidth } = Astro.props;
+---
+
+<html lang="uk">
+	<BaseHead {pageTitle}/>
+	<body>
+		<header>
+			<Navigation />
+		</header>
+		<Container {containerMaxWidth}>
+			<slot {pageTitle} />
+		</Container>
+		<Footer />
+        <script>
+            import "../js/menu.js";
+        </script>
+	</body>
+</html>
